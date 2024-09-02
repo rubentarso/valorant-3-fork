@@ -20,14 +20,14 @@ public class GameManager : MonoBehaviour
         TryGetComponent(out source);
 
         Restantes = FindObjectsOfType<Moeda>().Length;
-        hud.text = $"Moedas Restantes: {Restantes}";
+        hud.text = $"Gols Restantes: {Restantes}";
     }
 
     public void SubtrairMoedas(int valor)
     {
 
         Restantes = Restantes - valor;
-        hud.text = $"Moedas Restantes: {Restantes}";
+        hud.text = $"Gols Restantes: {Restantes}";
         source.PlayOneShot(clipMoeda);
 
         if (Restantes <= 0)
